@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Salas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">🎬 Cinema Control</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Cadastro de Filmes</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Cadastro de Salas</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Cadastro de Sessões</a></li>
+          <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Venda de Ingressos</a></li>
+          <li class="nav-item"><a class="nav-link" href="sessoes.html">Sessões Disponíveis</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Cadastro de Salas</h2>
+    <form id="form-sala">
+      <div class="mb-3">
+        <label class="form-label">Nome da Sala</label>
+        <input type="text" class="form-control" id="nomeSala" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Capacidade</label>
+        <input type="number" class="form-control" id="capacidade" required min="1" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tipo</label>
+        <select class="form-select" id="tipoSala" required>
+          <option value="">Selecione</option>
+          <option>2D</option>
+          <option>3D</option>
+          <option>IMAX</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar Sala</button>
+    </form>
+  </div>
+
+  <script src="./js/salas.js"></script>
+</body>
+</html>
